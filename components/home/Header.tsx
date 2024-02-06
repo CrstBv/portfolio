@@ -6,8 +6,8 @@ import Image from "next/image";
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container max-w-2xl h-16 flex items-center justify-between">
-        <div>
+      <div className="container max-w-4xl h-16 flex items-center justify-between">
+        <div className="flex w-24 items-start">
           <Button variant="link">
             <Link href="/" >
                     Home

@@ -16,14 +16,14 @@ const ProjectCard = () => {
       className="group relative flex min-h-[300px] w-full flex-col overflow-hidden rounded-2xl 
     shadow-lg transition-all hover:shadow-xl md:min-h-[414x]"
     >
-      <ul className="grid w-full grid-cols-1 gap-5 lg:grid-cols-3 xl:gap-10">
+      <ul className="grid w-full grid-cols-1 gap-4 lg:grid-cols-3 xl:gap-10">
         {projectsData.map((project) => {
         return (
           <li key={project.title} className="">
-            <Card className="flex min-h-[230px] flex-col gap-3 p-6 md:gap-4">
+            <Card className="flex min-h-[230px] flex-col gap-3 p-1 md:gap-4">
               <Link
                 href={project.href}
-                className="flex justify-center flex-grow min-h-48"
+                className="flex justify-center flex-row min-h-48"
               >
                 <CardHeader>
                     <Image
@@ -34,14 +34,26 @@ const ProjectCard = () => {
                       className="w-[310px] h-fit"
                       priority
                     />
-                    <CardTitle className="flex justify-center hover:underline hover:underline-offset-1 hover:text-blue-400">
+                    <CardTitle className="flex justify-center pt-3 hover:underline hover:underline-offset-1 hover:text-blue-400">
                       {project.title}
                   </CardTitle>
                 </CardHeader>
                 </Link>
-                <CardFooter  className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4">
-                  <p className="w-full">{project.descrition}Technologies</p>
-                  <p className="flex flex-row">Technologies</p>
+                <CardFooter  className="flex min-h-[230px] flex-col gap-3 p-3 md:gap-4">
+                  <p className="w-full text-[15px]">{project.descrition}</p>
+                  <ul className="flex justify-center flex-row">
+                    {project.technologies?.map((tech) => (
+                      <li key={tech.name} className="px-1">
+                        <Image
+                        src={tech.image}
+                        width={25}
+                        height={25}
+                        alt="technology" 
+                        className="bg-white rounded-lg flex items-center"
+                        />
+                      </li>
+                    ))}
+                  </ul>
                 </CardFooter>
             </Card>
           </li>
