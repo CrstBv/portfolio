@@ -8,7 +8,7 @@ export const projectsData = [
       " Además de la funcionalidad para mostrar posts relacionados y filtrarlos por título y categoría.",
     ],
     image: "/assets/images/blogApp.png",
-    href: "https://github.com/CrstBv/blog-app/tree/main",
+    href: "https://blog-app-snowy-mu.vercel.app/?page=1",
     technologies: [
       {
         name: "mongodb",
@@ -35,6 +35,9 @@ export const projectsData = [
         image: "/assets/icons/tailwindcss.svg",
       },
     ],
+    soucerCode: [{
+      href:"https://github.com/CrstBv/blog-app/tree/main"
+    }]
   },
   {
     title: "To Do App",
