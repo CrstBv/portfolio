@@ -1,0 +1,32 @@
+{
+    "HomeLink": {
+        "title": "Inicio",
+        "footer": "Ir al inicio de la pagina"
+    },
+    "about-section": {
+        "title" : "Sobre mi",
+        "description": "¡Hola! Soy Cristian Bernal, estudiante de ingenieria en Software y Redes apasionado por la creación de soluciones tecnológicas innovadoras. Mi enfoque se centra en el desarrollo web, con especial atención en la implementación de controladores eficientes y el manejo efectivo de errores, para la resolución ágil de problemas y busco continuamente mejorar la eficiencia y robustez de los sistemas que desarrollo.",
+        "DownloadButton": "Descargar CV",
+        "href-CV": "/documents/AngelBernalCV.pdf"
+    }, 
+    "projects-section": {
+        "title": "Proyectos",
+        "title-OSPF": "Interconexión de redes LAN usando OSPF 10 Multí area",
+        "description-BlogApp": "Desarrollo de una aplicación de blog completa con autenticación y creación de usuarios utilizando Clerk con middleware para asegurar rutas y prevenir amenazas de seguridad. Se implementaron acciones para gestionar contenido permitiendo a los usuarios autenticados crear y editar sus posts. Además de la funcionalidad para mostrar posts relacionados y filtrarlos por título y categoría.",
+        "description-ToDoApp": "Creación de una aplicación de lista de tareas con una arquitectura modular implementando controladores para un flujo de datos eficiente. Se enfatizó el manejo efectivo de errores para mejorar la estabilidad y la experiencia del usuario. Se garantizó la seguridad de la aplicación protegiendo las rutas sensibles mediante middleware.",
+        "description-eCommerceApi": "Desarrollo de una API robusta para una plataforma de comercio electrónico, utilizando controladores para gestionar de manera eficiente las operaciones CRUD. Se implementó middleware para proteger rutas críticas y prevenir accesos no autorizados, y se aplicaron buenas prácticas de codificación para garantizar la mantenibilidad y calidad del código.",
+        "description-LAN": "Configuracion de Router: IP_Host, Mascara de subred, On y configuracion de ospf 10. Configuracion de PC's: IP_Host, Mascara de subred y Gateway"
+    },
+    
+    "skills-section" :{
+        "title": "Habilidades"
+    },
+    "contact-section": {
+        "title": "Contacto",
+        "email": "Correo:"
+    },
+    "LocaleSwitcher": {
+        "label": "Cambiar lenguaje",
+        "locale": "{locale, select, es {Español} en {English} other {Unknown}}"
+      }
+}

@@ -1,0 +1,31 @@
+{
+    "HomeLink": {
+        "title": "Home",
+        "footer": "Go to the top of the page"
+    },
+    "about-section": {
+        "title" : "About me",
+        "description": "Hello! I'm Cristian Bernal, a Software and Networks Engineering student passionate about creating innovative technological solutions. My focus is on web development, with special attention to efficient controller implementation and effective error handling, for agile problem-solving. I continually seek to improve the efficiency and robustness of the systems I develop.",
+        "DownloadButton": "Download CV",
+        "href-CV": "/documents/AngelBernalCVen.pdf"
+    },
+    "skills-section" :{
+        "title": "Skills"
+    },
+    "projects-section": {
+        "title": "Projects",
+        "title-OSPF": "Interconnection of LAN networks using OSPF 10 Multi-area.",
+        "description-BlogApp": "Development of a full-stack blog application with user authentication using Clerk, middleware for route security, and content management features allowing authenticated users to create and edit posts. Additionally, includes functionality to display related posts and filter them by title and category",
+        "description-ToDoApp": "Development of a task list application with a modular architecture, implementing controllers for efficient data flow. Effective error handling emphasized to enhance stability and user experience. Application security ensured by protecting sensitive routes through middleware.",
+        "description-eCommerceApi": "Development of a robust API for an e-commerce platform, utilizing controllers to efficiently manage CRUD operations. Middleware implemented to protect critical routes and prevent unauthorized access. Application of coding best practices to ensure code maintainability and quality.",
+        "description-LAN": "Router Configuration: IP_Host, Subnet Mask, On and OSPF 10 configuration. PC Configuration: IP_Host, Subnet Mask and Gateway."
+    },
+    "contact-section": {
+        "title": "Contact",
+        "email": "Email:"
+    },
+    "LocaleSwitcher": {
+        "label": "Change language",
+        "locale": "{locale, select, es {Español} en {English} other {Unknown}}"
+      }
+}
