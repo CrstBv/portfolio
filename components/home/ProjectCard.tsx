@@ -1,17 +1,9 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import Image from "next/image";
-import Link from "next/link";
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const ProjectCard = () => {
-  const t = useTranslations()
+  const t = useTranslations();
 
   const projectsData = [
     {
@@ -45,9 +37,11 @@ const ProjectCard = () => {
           image: "/assets/icons/tailwindcss.svg",
         },
       ],
-      soucerCode: [{
-        href:"https://github.com/CrstBv/blog-app/tree/main"
-      }]
+      soucerCode: [
+        {
+          href: "https://github.com/CrstBv/blog-app/tree/main",
+        },
+      ],
     },
     {
       title: "To Do App",
@@ -101,24 +95,34 @@ const ProjectCard = () => {
       technologies: [
         {
           name: "cisco",
-          image: "/assets/icons/cisco.svg"
-        }
-      ]
-
-    }
+          image: "/assets/icons/cisco.svg",
+        },
+      ],
+    },
+    {
+      title: t("projects-section.title-OSPF-ACL"),
+      description: t("projects-section.description-LAN-ACL"),
+      image: "/assets/images/lanospfacl.png",
+      href: "/assets/images/lanospfacl.png",
+      technologies: [
+        {
+          name: "cisco",
+          image: "/assets/icons/cisco.svg",
+        },
+      ],
+    },
   ];
 
   return (
     <div
-      className="group relative flex items-center min-h-[300px] w-full flex-col overflow-hidden rounded-2xl 
-    shadow-lg transition-all hover:shadow-xl md:min-h-[370px]"
+      className="group relative flex items-center min-h-[680px] w-full flex-col rounded-2xl md:min-h-[370px]"
     >
-      <ul className="grid w-full grid-cols-1 gap-4 lg:grid-cols-3 xl:gap-10">
+      <ul className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3 xl:gap-10">
         {projectsData.map((project) => {
           return (
             <li key={project.title}>
-              <Card className="flex min-h-[230px] flex-col gap-3 p-1 md:gap-4">
-                <Link
+              <Card className="flex min-h-[550px] flex-col gap-3 p-1 md:gap-4">
+                <a
                   href={project.href}
                   className="flex justify-center flex-row min-h-48"
                 >
@@ -135,21 +139,21 @@ const ProjectCard = () => {
                       {project.title}
                     </CardTitle>
                   </CardHeader>
-                </Link>
+                </a>
                 <ul>
                   {project.soucerCode?.map((source, index) => (
                     <li key={index} className="flex justify-center">
-                      <Link href={source.href} className="text-blue-400">
+                      <a href={source.href} className="text-blue-400">
                         <span>source code</span>
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
-                <CardFooter className="flex min-h-[180px] flex-col gap-3 p-3 md:gap-4">
-                  <p className="w-full text-[15px]">{project.description}</p>
+                <CardFooter className="flex min-h-[295px] flex-col gap-3 p-3 md:gap-4">
+                  <p className="w-full text-[14px] text-justify">{project.description}</p>
                   <ul className="flex justify-center flex-row">
                     {project.technologies?.map((tech) => (
-                      <li key={tech.name} className="px-1">
+                      <li key={tech.name} className="px-1 pt-2">
                         <Image
                           src={tech.image}
                           width={25}
