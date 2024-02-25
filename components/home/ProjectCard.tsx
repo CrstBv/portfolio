@@ -124,6 +124,7 @@ const ProjectCard = () => {
               <Card className="flex min-h-[550px] flex-col gap-3 p-1 md:gap-4">
                 <a
                   href={project.href}
+                  target="_blank"
                   className="flex justify-center flex-row min-h-48"
                 >
                   <CardHeader>
@@ -143,7 +144,10 @@ const ProjectCard = () => {
                 <ul>
                   {project.soucerCode?.map((source, index) => (
                     <li key={index} className="flex justify-center">
-                      <a href={source.href} className="text-blue-400">
+                      <a 
+                       href={source.href}
+                       target="_blank"
+                       className="text-blue-400">
                         <span>source code</span>
                       </a>
                     </li>
