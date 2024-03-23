@@ -7,10 +7,42 @@ const ProjectCard = () => {
 
   const projectsData = [
     {
+      title: "Colab Web",
+      description: t("projects-section.description-colab-web"),
+      image: "/assets/images/colab-web.png",
+      href: "https://github.com/CrstBv/colab-web",
+      technologies: [
+        {
+          name: "convex",
+          image: "/assets/icons/convex-bw.png",
+        },
+        {
+          name: "next",
+          image: "/assets/icons/nextdotjs.svg",
+        },
+        {
+          name: "react",
+          image: "/assets/icons/react.svg",
+        },
+        {
+          name: "typescript",
+          image: "/assets/icons/typescript.svg",
+        },
+        {
+          name: "clerk",
+          image: "/assets/icons/clerk.svg",
+        },
+        {
+          name: "tailwindcss",
+          image: "/assets/icons/tailwindcss.svg",
+        },
+      ],
+    },
+    {
       title: "Cosmic Blog App",
       description: t("projects-section.description-BlogApp"),
       image: "/assets/images/blogApp.png",
-      href: "https://blog-app-snowy-mu.vercel.app/?page=1",
+      href: "https://github.com/CrstBv/blog-app",
       technologies: [
         {
           name: "mongodb",
@@ -39,7 +71,7 @@ const ProjectCard = () => {
       ],
       soucerCode: [
         {
-          href: "https://github.com/CrstBv/blog-app/tree/main",
+          href: "https://blog-app-snowy-mu.vercel.app/?page=1",
         },
       ],
     },
@@ -88,18 +120,6 @@ const ProjectCard = () => {
       ],
     },
     {
-      title: t("projects-section.title-OSPF"),
-      description: t("projects-section.description-LAN"),
-      image: "/assets/images/lanospf.png",
-      href: "/assets/images/lanospf.png",
-      technologies: [
-        {
-          name: "cisco",
-          image: "/assets/icons/cisco.svg",
-        },
-      ],
-    },
-    {
       title: t("projects-section.title-OSPF-ACL"),
       description: t("projects-section.description-LAN-ACL"),
       image: "/assets/images/lanospfacl.png",
@@ -114,9 +134,7 @@ const ProjectCard = () => {
   ];
 
   return (
-    <div
-      className="group relative flex items-center min-h-[680px] w-full flex-col rounded-2xl md:min-h-[370px]"
-    >
+    <div className="group relative flex items-center min-h-[680px] w-full flex-col rounded-2xl md:min-h-[370px]">
       <ul className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3 xl:gap-10">
         {projectsData.map((project) => {
           return (
@@ -144,24 +162,27 @@ const ProjectCard = () => {
                 <ul>
                   {project.soucerCode?.map((source, index) => (
                     <li key={index} className="flex justify-center">
-                      <a 
-                       href={source.href}
-                       target="_blank"
-                       className="text-blue-400">
-                        <span>source code</span>
+                      <a
+                        href={source.href}
+                        target="_blank"
+                        className="text-blue-400"
+                      >
+                        <span>Visit Site</span>
                       </a>
                     </li>
                   ))}
                 </ul>
                 <CardFooter className="flex min-h-[295px] flex-col gap-3 p-3 md:gap-4">
-                  <p className="w-full text-[14px] text-justify">{project.description}</p>
+                  <p className="w-full text-[14px] text-justify">
+                    {project.description}
+                  </p>
                   <ul className="flex justify-center flex-row">
                     {project.technologies?.map((tech) => (
                       <li key={tech.name} className="px-1 pt-2">
                         <Image
                           src={tech.image}
-                          width={25}
-                          height={25}
+                          width={35}
+                          height={35}
                           alt="technology"
                           className="bg-white rounded-lg flex items-center"
                         />
